@@ -1,0 +1,337 @@
+Script started on Wed 20 Jun 2012 08:37:40 PM BRT
+]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# vi .bashrc cd[Kexport PATH=/usr/bin:/lib/gems/1.8/bin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24Pbundle install^C
+]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# rails generate scaffold User nome:string email: string genero:string data_nascimento:date senha:string admin:boolean 
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20120620233802_create_users.rb
+[1m[32m      create[0m    app/models/user.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/unit/user_test.rb
+[1m[32m      create[0m      test/fixtures/users.yml
+[1m[37m      invoke[0m  resource_route
+[1m[32m       route[0m    resources :users
+[1m[37m      invoke[0m  scaffold_controller
+[1m[32m      create[0m    app/controllers/users_controller.rb
+[1m[37m      invoke[0m    erb
+[1m[32m      create[0m      app/views/users
+[1m[32m      create[0m      app/views/users/index.html.erb
+[1m[32m      create[0m      app/views/users/edit.html.erb
+[1m[32m      create[0m      app/views/users/show.html.erb
+[1m[32m      create[0m      app/views/users/new.html.erb
+[1m[32m      create[0m      app/views/users/_form.html.erb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/functional/users_controller_test.rb
+[1m[37m      invoke[0m    helper
+[1m[32m      create[0m      app/helpers/users_helper.rb
+[1m[37m      invoke[0m      test_unit
+[1m[32m      create[0m        test/unit/helpers/users_helper_test.rb
+[1m[37m      invoke[0m  assets
+[1m[37m      invoke[0m    coffee
+[1m[32m      create[0m      app/assets/javascripts/users.js.coffee
+[1m[37m      invoke[0m    scss
+[1m[32m      create[0m      app/assets/stylesheets/users.css.scss
+[1m[37m      invoke[0m  scss
+[1m[32m      create[0m    app/assets/stylesheets/scaffolds.css.scss
+]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# vi db/migrate/20120620233802_create_users.rb
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"db/migrate/20120620233802_create_users.rb" 14 lines, 267 characters[1;1Hclass CreateUsers < ActiveRecord::Migration
+  def change
+    create_table :users do |t|[4;6H t.string :nome[5;6H t.string :email[6;6H t.string :genero[7;6H t.date :data_nascimento[8;6H t.string :senha[9;6H t.boolean :admin[11;6H t.timestamps
+    end
+  end
+end
+[1m[34m~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h[?25l[m[24;1H[K[24;1H:[?12l[?25hq[?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# vi db/migrate/20120620233802_create_users.rb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crails generate scaffold User nome:string email:sstring genero:string data_nascimento:date senha:string admin:boolean [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C nome:string email:st[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C nome:string email:str[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C nome:string email:stri[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C nome:string email:strin[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CC nome:string email:stri[1@n[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co nome:string email:str[1@i[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm nome:string email:st[1@r[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp nome:string email:s[1@t[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr nome:string email:[1@s[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca nome:string email[1@:[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Come:string email:[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cme:string email:s[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce:string email:st[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:string email:str[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstring email:stri[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctring email:strin[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cring email:string[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cing email:string [1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cng email:string g[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cg email:string ge[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C email:string gen[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cemail:string gene[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmail:string gener[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cail:string genero[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cil:string genero:[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl:string genero:s[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:string genero:st[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstring genero:str[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctring genero:stri[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cring genero:strin[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cing genero:string[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cng genero:string [1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cg genero:string d[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C genero:string da[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgenero:string dat[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cenero:string data[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnero:string data_[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cero:string data_n[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cro:string data_na[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co:string data_nas[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:string data_nasc[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstring data_nasci[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctring data_nascim[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cring data_nascime[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cing data_nascimen[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cng data_nasciment[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cg data_nascimento[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C data_nascimento:[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdata_nascimento:d[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cata_nascimento:da[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cta_nascimento:dat[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca_nascimento:date[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_nascimento:date [1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnascimento:date s[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cascimento:date se[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscimento:date sen[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccimento:date senh[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimento:date senha[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmento:date senha:[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cento:date senha:s[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnto:date senha:st[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cto:date senha:str[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co:date senha:stri[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:date senha:strin[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdate senha:string[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cate senha:string [1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cte senha:string a[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce senha:string ad[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C senha:string adm[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csenha:string admi[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cenha:string admin[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnha:string admin:[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cha:string admin:b[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca:string admin:bo[C[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:string admin:boo[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstring admin:bool[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctring admin:boole[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cring admin:boolea[1P[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cing admin:boolean[1P [A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cng admin:boolean [K[A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cg admin:boolean  [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[C[1P[1P[1P[1P[1P[1P r e [1P [1P u s u a r i o : r e f e r e n  [A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P e r [1P [1P [1P e r : r e f e r e n c e s  [A]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+ e m [1P n [1P b o o k : r e f e r e n c e s [C d a t a : d a t e t i m e [1P [1P [1P [1P [C v a l o r : f l o a t [C 
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20120620234010_create_compras.rb
+[1m[32m      create[0m    app/models/compra.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/unit/compra_test.rb
+[1m[32m      create[0m      test/fixtures/compras.yml
+[1m[37m      invoke[0m  resource_route
+[1m[32m       route[0m    resources :compras
+[1m[37m      invoke[0m  scaffold_controller
+[1m[32m      create[0m    app/controllers/compras_controller.rb
+[1m[37m      invoke[0m    erb
+[1m[32m      create[0m      app/views/compras
+[1m[32m      create[0m      app/views/compras/index.html.erb
+[1m[32m      create[0m      app/views/compras/edit.html.erb
+[1m[32m      create[0m      app/views/compras/show.html.erb
+[1m[32m      create[0m      app/views/compras/new.html.erb
+[1m[32m      create[0m      app/views/compras/_form.html.erb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/functional/compras_controller_test.rb
+[1m[37m      invoke[0m    helper
+[1m[32m      create[0m      app/helpers/compras_helper.rb
+[1m[37m      invoke[0m      test_unit
+[1m[32m      create[0m        test/unit/helpers/compras_helper_test.rb
+[1m[37m      invoke[0m  assets
+[1m[37m      invoke[0m    coffee
+[1m[32m      create[0m      app/assets/javascripts/compras.js.coffee
+[1m[37m      invoke[0m    scss
+[1m[32m      create[0m      app/assets/stylesheets/compras.css.scss
+[1m[37m      invoke[0m  scss
+[1m[34m   identical[0m    app/assets/stylesheets/scaffolds.css.scss
+]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# vi db/migrate/20120620234010_create_compras.rb
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"db/migrate/20120620234010_create_compras.rb" 14 lines, 288 characters[1;1Hclass CreateCompras < ActiveRecord::Migration
+  def change
+    create_table :compras do |t|[4;6H t.references :user[5;6H t.references :ebook[6;6H t.date :data[7;6H t.float :valor[9;6H t.timestamps
+    end
+    add_index :compras, :user_id
+    add_index :compras, :ebook_id
+  end
+end
+[1m[34m~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h[?25l[m[24;1H[K[24;1H:[?12l[?25hq[?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# vi app/models/compra.rb
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"app/models/compra.rb" 5 lines, 109 characters[1;1Hclass Compra < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :ebook
+  attr_accessible :data, :valor
+end
+[1m[34m~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h
+
+
+
+[men[?25l[24;1H[1mrecording[m[24;10H[K[5;3H[?12l[?25h[?25l[24;1H[K[5;3H[?12l[?25h[?25l[24;1H[1mrecording[5;3H[?12l[?25h[?25l[m[24;1H[K[5;3H[?12l[?25h[4;31H[3;19H[2;18H[1;33H[2;18H[3;19H[4;31H
+en[4;31H[3;19H[2;18H[1;33H[2;18H[3;19H[4;31H
+en[4;31H[3;19H[2;18H[3;19H[4;31H
+en[?25l[1;23r[1;1H[4M[1;24r[20;1H[1m[34m~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h[?25l[?12l[?25h[?25l[24;1H[m?[?12l[?25hq[?25l[24;2H[K[24;2H[?12l[?25h [1;1H[?25l[24;1H:[?12l[?25hq![?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# vi app/models/compra.rbdb/migrate/20120620234010_create_compras.rb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crails generate scaffold Compra user:references eebook:references data:date valor:float  [A[3Pvi db/migrate/20120620233802_create_users.rb
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crails generate scaffold Compra user:references eebook:references data:date valor:float  [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K ebookEebook[1Pbook[C[C[C[C titulo?[K:string aut or?[K:string descricao?[K:text edicao?[K:integer valor?[K:float genero?[K:string paginas[Ks?[K:intege r 
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20120620235644_create_ebooks.rb
+[1m[32m      create[0m    app/models/ebook.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/unit/ebook_test.rb
+[1m[32m      create[0m      test/fixtures/ebooks.yml
+[1m[37m      invoke[0m  resource_route
+[1m[32m       route[0m    resources :ebooks
+[1m[37m      invoke[0m  scaffold_controller
+[1m[32m      create[0m    app/controllers/ebooks_controller.rb
+[1m[37m      invoke[0m    erb
+[1m[32m      create[0m      app/views/ebooks
+[1m[32m      create[0m      app/views/ebooks/index.html.erb
+[1m[32m      create[0m      app/views/ebooks/edit.html.erb
+[1m[32m      create[0m      app/views/ebooks/show.html.erb
+[1m[32m      create[0m      app/views/ebooks/new.html.erb
+[1m[32m      create[0m      app/views/ebooks/_form.html.erb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/functional/ebooks_controller_test.rb
+[1m[37m      invoke[0m    helper
+[1m[32m      create[0m      app/helpers/ebooks_helper.rb
+[1m[37m      invoke[0m      test_unit
+[1m[32m      create[0m        test/unit/helpers/ebooks_helper_test.rb
+[1m[37m      invoke[0m  assets
+[1m[37m      invoke[0m    coffee
+[1m[32m      create[0m      app/assets/javascripts/ebooks.js.coffee
+[1m[37m      invoke[0m    scss
+[1m[32m      create[0m      app/assets/stylesheets/ebooks.css.scss
+[1m[37m      invoke[0m  scss
+[1m[34m   identical[0m    app/assets/stylesheets/scaffolds.css.scss
+]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# vi app/controllers/ebooks_controller.rb 
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"app/controllers/ebooks_controller.rb" 84 lines, 1942 characters[2;1Hclass EbooksController < ApplicationController
+  # GET /ebooks
+  # GET /ebooks.json
+  def index
+    @ebooks = Ebook.all[8;4H respond_to do |format|[9;6H format.html # index.html.erb[10;6H format.json { render :json => @ebooks }
+    end
+  end
+
+  # GET /ebooks/1
+  # GET /ebooks/1.json
+  def show
+    @ebook = Ebook.find(params[:id])[19;4H respond_to do |format|[20;6H format.html # show.html.erb[21;6H format.json { render :json => @ebook }
+    end
+  end[1;1H[?12l[?25h
+
+
+
+
+
+
+
+[8;1H
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[?25l[1;23r[23;1H
+[1;24r[24;1H[K[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H # GET /ebooks/new[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H # GET /ebooks/new.json[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H def new[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H @ebook = Ebook.new[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H respond_to do |format|[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;6H format.html # new.html.erb[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;6H format.json { render :json => @ebook }[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H end[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H end[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H # GET /ebooks/1/edit[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H def edit[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H @ebook = Ebook.find(params[:id])[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H end[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H # POST /ebooks[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H # POST /ebooks.json[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H def create[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H @ebook = Ebook.new(params[:ebook])[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H respond_to do |format|[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;6H if @ebook.save[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;8H format.html { redirect_to @ebook, :notice => 'Ebook was successfully cree[23;1Hated.' }[22;1H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;8H format.json { render :json => @ebook, :status => :created, :location =>  [23;1H@ebook }[22;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;6H else[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;8H format.html { render :action => "new" }[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;8H format.json { render :json => @ebook.errors, :status => :unprocessable_ee[23;1Hntity }[22;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;6H end[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H end[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H end[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H # PUT /ebooks/1[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H # PUT /ebooks/1.json[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H def update[?12l[?25h[22;1H[21;1H[20;1H[19;1H[18;1H[17;1H[15;1H[14;1H[13;1H[11;1H[9;1H[8;1H[7;1H[6;1H[5;1H[4;1H[3;1H[2;1H[1;1H[?25l[1;23r[1;1H[L[1;24r[1;2H end[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;4H @ebook = Ebook.find(params[:id])[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;2H def edit[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;2H # GET /ebooks/1/edit[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;2H end[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;4H end[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;6H format.json { render :json => @ebook }[23;1H[1m[34m@                                                                               [1;1H[?12l[?25h[?25l[1;23r[m[1;1H[L[1;24r[1;6H format.html # new.html.erb[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;4H respond_to do |format|[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;4H @ebook = Ebook.new[23;1H[1m[34m@                                                                               [1;1H[?12l[?25h[?25l[1;23r[m[1;1H[L[1;24r[1;2H def new[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;2H # GET /ebooks/new.json[23;1H[1m[34m@                                                                               [1;1H[?12l[?25h[?25l[1;23r[m[1;1H[L[1;24r[1;2H # GET /ebooks/new[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;2H end[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;4H end[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;6H format.json { render :json => @ebook }[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;6H format.html # show.html.erb[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;4H respond_to do |format|[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;4H @ebook = Ebook.find(params[:id])[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;2H def show[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;2H # GET /ebooks/1.json[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;2H # GET /ebooks/1[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;2H end[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;4H end[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;6H format.json { render :json => @ebooks }[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;6H format.html # index.html.erb[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;4H respond_to do |format|[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;4H @ebooks = Ebook.all[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;2H def index[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;2H # GET /ebooks.json[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;2H # GET /ebooks[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;1Hclass EbooksController < ApplicationController[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[?25l[1;23r[23;1H
+[1;24r[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H # GET /ebooks/new[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H # GET /ebooks/new.json[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H def new[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H @ebook = Ebook.new[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H respond_to do |format|[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;6H format.html # new.html.erb[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;6H format.json { render :json => @ebook }[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H end[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H end[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H # GET /ebooks/1/edit[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H def edit[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H @ebook = Ebook.find(params[:id])[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H end[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H # POST /ebooks[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H # POST /ebooks.json[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H def create[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H @ebook = Ebook.new(params[:ebook])[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H respond_to do |format|[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;6H if @ebook.save[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;8H format.html { redirect_to @ebook, :notice => 'Ebook was successfully cree[23;1Hated.' }[22;1H[?12l[?25h[?25l
+
+:[?12l[?25hq![?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# vi app/controllers/ebooks_controller.rb [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kll
+total 120
+drwxr-xr-x 13 root    root     4096 2012-06-20 20:37 [0m[01;34m.[0m/
+drwxr-xr-x 40 claiton claiton  4096 2012-06-20 20:34 [01;34m..[0m/
+drwxr-xr-x  8 root    root     4096 2012-06-20 20:34 [01;34mapp[0m/
+drwxr-xr-x  5 root    root     4096 2012-06-20 20:34 [01;34mconfig[0m/
+-rw-r--r--  1 root    root      155 2012-06-20 20:34 config.ru
+drwxr-xr-x  3 root    root     4096 2012-06-20 20:38 [01;34mdb[0m/
+drwxr-xr-x  2 root    root     4096 2012-06-20 20:34 [01;34mdoc[0m/
+-rw-r--r--  1 root    root      778 2012-06-20 20:34 Gemfile
+-rw-r--r--  1 root    root     2470 2012-06-20 20:35 Gemfile.lock
+-rw-r--r--  1 root    root    36864 2012-06-20 20:59 generate
+-rw-r--r--  1 root    root      430 2012-06-20 20:34 .gitignore
+drwxr-xr-x  4 root    root     4096 2012-06-20 20:34 [01;34mlib[0m/
+drwxr-xr-x  2 root    root     4096 2012-06-20 20:38 [01;34mlog[0m/
+drwxr-xr-x  2 root    root     4096 2012-06-20 20:34 [01;34mpublic[0m/
+-rw-r--r--  1 root    root      270 2012-06-20 20:34 Rakefile
+-rw-r--r--  1 root    root     9208 2012-06-20 20:34 README.rdoc
+drwxr-xr-x  2 root    root     4096 2012-06-20 20:34 [01;34mscript[0m/
+drwxr-xr-x  7 root    root     4096 2012-06-20 20:34 [01;34mtest[0m/
+drwxr-xr-x  3 root    root     4096 2012-06-20 20:34 [01;34mtmp[0m/
+drwxr-xr-x  4 root    root     4096 2012-06-20 20:34 [01;34mvendor[0m/
+]0;root@ubuntu: /home/claiton/eBookroot@ubuntu:/home/claiton/eBook# cd app
+]0;root@ubuntu: /home/claiton/eBook/approot@ubuntu:/home/claiton/eBook/app# ll
+total 32
+drwxr-xr-x  8 root root 4096 2012-06-20 20:34 [0m[01;34m.[0m/
+drwxr-xr-x 13 root root 4096 2012-06-20 20:37 [01;34m..[0m/
+drwxr-xr-x  5 root root 4096 2012-06-20 20:34 [01;34massets[0m/
+drwxr-xr-x  2 root root 4096 2012-06-20 20:59 [01;34mcontrollers[0m/
+drwxr-xr-x  2 root root 4096 2012-06-20 20:56 [01;34mhelpers[0m/
+drwxr-xr-x  2 root root 4096 2012-06-20 20:34 [01;34mmailers[0m/
+drwxr-xr-x  2 root root 4096 2012-06-20 20:56 [01;34mmodels[0m/
+drwxr-xr-x  6 root root 4096 2012-06-20 20:56 [01;34mviews[0m/
+]0;root@ubuntu: /home/claiton/eBook/approot@ubuntu:/home/claiton/eBook/app# cd views
+]0;root@ubuntu: /home/claiton/eBook/app/viewsroot@ubuntu:/home/claiton/eBook/app/views# ll
+total 24
+drwxr-xr-x 6 root root 4096 2012-06-20 20:56 [0m[01;34m.[0m/
+drwxr-xr-x 8 root root 4096 2012-06-20 20:34 [01;34m..[0m/
+drwxr-xr-x 2 root root 4096 2012-06-20 20:40 [01;34mcompras[0m/
+drwxr-xr-x 2 root root 4096 2012-06-20 20:56 [01;34mebooks[0m/
+drwxr-xr-x 2 root root 4096 2012-06-20 20:34 [01;34mlayouts[0m/
+drwxr-xr-x 2 root root 4096 2012-06-20 20:38 [01;34musers[0m/
+]0;root@ubuntu: /home/claiton/eBook/app/viewsroot@ubuntu:/home/claiton/eBook/app/views# cd layouts
+]0;root@ubuntu: /home/claiton/eBook/app/views/layoutsroot@ubuntu:/home/claiton/eBook/app/views/layouts# ll
+total 12
+drwxr-xr-x 2 root root 4096 2012-06-20 20:34 [0m[01;34m.[0m/
+drwxr-xr-x 6 root root 4096 2012-06-20 20:56 [01;34m..[0m/
+-rw-r--r-- 1 root root  232 2012-06-20 20:34 application.html.erb
+]0;root@ubuntu: /home/claiton/eBook/app/views/layoutsroot@ubuntu:/home/claiton/eBook/app/views/layouts# vi application.html.erb 
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"application.html.erb" 14 lines, 232 characters[1;1H<!DOCTYPE html>
+<html>
+<head>
+  <title>EBook</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
+[1m[34m~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h[?25l[m[24;1H[K[24;1H?[?12l[?25h [1;1H[?25l[24;1H:[?12l[?25hq[?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;root@ubuntu: /home/claiton/eBook/app/views/layoutsroot@ubuntu:/home/claiton/eBook/app/views/layouts# cd ..
+]0;root@ubuntu: /home/claiton/eBook/app/viewsroot@ubuntu:/home/claiton/eBook/app/views# cd users
+]0;root@ubuntu: /home/claiton/eBook/app/views/usersroot@ubuntu:/home/claiton/eBook/app/views/users# ll
+total 28
+drwxr-xr-x 2 root root 4096 2012-06-20 20:38 [0m[01;34m.[0m/
+drwxr-xr-x 6 root root 4096 2012-06-20 20:56 [01;34m..[0m/
+-rw-r--r-- 1 root root  110 2012-06-20 20:38 edit.html.erb
+-rw-r--r-- 1 root root  984 2012-06-20 20:38 _form.html.erb
+-rw-r--r-- 1 root root  713 2012-06-20 20:38 index.html.erb
+-rw-r--r-- 1 root root   75 2012-06-20 20:38 new.html.erb
+-rw-r--r-- 1 root root  418 2012-06-20 20:38 show.html.erb
+]0;root@ubuntu: /home/claiton/eBook/app/views/usersroot@ubuntu:/home/claiton/eBook/app/views/users# c[Kgedit index.html.erb 
+
+(gedit:2564): Gtk-WARNING **: Attempting to store changes into `/root/.local/share/recently-used.xbel', but failed: Failed to create file '/root/.local/share/recently-used.xbel.X8JHGW': No such file or directory
+
+(gedit:2564): Gtk-WARNING **: Attempting to set the permissions of `/root/.local/share/recently-used.xbel', but failed: No such file or directory
+
+(gedit:2564): Gtk-WARNING **: Attempting to store changes into `/root/.local/share/recently-used.xbel', but failed: Failed to create file '/root/.local/share/recently-used.xbel.PXM8FW': No such file or directory
+
+(gedit:2564): Gtk-WARNING **: Attempting to set the permissions of `/root/.local/share/recently-used.xbel', but failed: No such file or directory
+]0;root@ubuntu: /home/claiton/eBook/app/views/usersroot@ubuntu:/home/claiton/eBook/app/views/users# cd ..
+]0;root@ubuntu: /home/claiton/eBook/app/viewsroot@ubuntu:/home/claiton/eBook/app/views# cd ..
+]0;root@ubuntu: /home/claiton/eBook/approot@ubuntu:/home/claiton/eBook/app# ll
+total 32
+drwxr-xr-x  8 root root 4096 2012-06-20 20:34 [0m[01;34m.[0m/
+drwxr-xr-x 13 root root 4096 2012-06-20 20:37 [01;34m..[0m/
+drwxr-xr-x  5 root 

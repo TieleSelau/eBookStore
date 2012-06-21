@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  autor: MyString
+  descricao: MyText
+  edicao: 1
+  valor: 1.5
+  genero: MyString
+  paginas: 1
+
+two:
+  titulo: MyString
+  autor: MyString
+  descricao: MyText
+  edicao: 1
+  valor: 1.5
+  genero: MyString
+  paginas: 1

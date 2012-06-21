@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @compra.user %>
+</p>
+
+<p>
+  <b>Ebook:</b>
+  <%= @compra.ebook %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @compra.data %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%= @compra.valor %>
+</p>
+
+
+<%= link_to 'Edit', edit_compra_path(@compra) %> |
+<%= link_to 'Back', compras_path %>

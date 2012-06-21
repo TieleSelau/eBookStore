@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @ebook.titulo %>
+</p>
+
+<p>
+  <b>Autor:</b>
+  <%= @ebook.autor %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @ebook.descricao %>
+</p>
+
+<p>
+  <b>Edicao:</b>
+  <%= @ebook.edicao %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%= @ebook.valor %>
+</p>
+
+<p>
+  <b>Genero:</b>
+  <%= @ebook.genero %>
+</p>
+
+<p>
+  <b>Paginas:</b>
+  <%= @ebook.paginas %>
+</p>
+
+
+<%= link_to 'Edit', edit_ebook_path(@ebook) %> |
+<%= link_to 'Back', ebooks_path %>
