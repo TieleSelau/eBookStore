@@ -207,16 +207,18 @@ function sendMessageDemoMini(aForm) {
 	var hash = xid;
 
 	if (body && xid) {
-		
-		// Clear the input
-		aForm.body.value = '';
+		try{	
+			// Clear the input
+			aForm.body.value = '';
 
-		// Display the message we sent
-		displayMessageMini(type, body, 'me@me', 'me', hash, getCompleteTime(), getTimeStamp(), 'user-message');
-		
-		setTimeout("handleMessageDemoMini('"+body+"','"+hash+"');",parseInt(hash)*500);
-		
-		
+			// Display the message we sent
+			displayMessageMini(type, body, 'me@me', 'me', hash, getCompleteTime(), getTimeStamp(), 'user-message');
+			
+			setTimeout("handleMessageDemoMini('"+body+"','"+hash+"');",parseInt(hash)*500);
+		}
+		catch(e){
+			console.log(e)
+		}	
 	}
     
 }
