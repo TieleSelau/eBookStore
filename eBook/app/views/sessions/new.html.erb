@@ -1,4 +1,4 @@
-<h1>Login</h1>
+﻿<h1>Login</h1>
 
 <%= form_tag sessions_path do %>
   <div class="field">
@@ -12,3 +12,4 @@
   <div class="actions"><%= submit_tag "Login" %></div>
 <% end %>
 
+<p>Não faz parte? <%= link_to 'Registre-se!', new_user_path %>

@@ -115,6 +115,32 @@ function createDemoMini() {
     var MARGIN_PLUGIN = 20;
     var widthPlugin = jQuery('.jm_starter').width() + jQuery('.jm_stored-conversations').width() + MARGIN_PLUGIN;
     LIMIT_CHAT_WINDOW = Math.floor((widthWindow - widthPlugin) / 153) - 1;
+	loginWithoutClick();
+}
+
+function loginWithoutClick(){
+	// Presence counter
+	var counter = '#jappix_mini a.jm_pane.jm_button span.jm_counter';
+
+	// Cannot open the roster?
+	if (jQuery(counter).text() == _e("..."))
+		return false;
+
+	// Not yet connected?
+	if (jQuery(counter).text() == _e("Chat")) {
+		// Add a waiting marker
+		jQuery(counter).text(_e("..."));
+
+		 setTimeout("jQuery('"+counter+"').text(_e('6')); addBuddyDemoMini('6','6','echo6');addBuddyDemoMini('5','5','echo5');addBuddyDemoMini('4','4','echo4'); addBuddyDemoMini('3','3','echo3');addBuddyDemoMini('2','2','echo2');addBuddyDemoMini('1','1','echo1');",1000);
+		
+		return false;
+	}
+
+	// Normal actions
+	if (!jQuery(this).hasClass('jm_clicked'))
+		showRosterMini();
+	else
+		hideRosterMini();
 }
 
 // Displays a roster buddy

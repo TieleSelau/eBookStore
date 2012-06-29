@@ -1305,6 +1305,14 @@ tbody .item-box .product-item .picture img:hover {
 	height: 10px;
 	margin: 0 3px;
 }
+.logout {
+	color: #7E7E7E !important;
+	font-weight: normal;
+	text-decoration: underline;
+	height: 10px;
+	margin: 0 3px;
+	float: right;
+}
 .header .ico-logout:hover {
 	color: #fff !important;
 }
@@ -10227,4 +10235,16 @@ span#ctl00_ctl00_cph1_cph1_PublicationReviewPrice1_rvValue {
 }
 .homepage-newsitems .viewall {
 	margin-bottom: 33px;
+}
+body .new_ebook,
+body .new_user,
+body .edit_ebook,
+body .list-ebook,
+body .ebook-details{
+	text-align: left;
+	margin-left: 2px;
+}
+.new_ebook #ebook_descricao,
+.edit_ebook #ebook_descricao{
+	width: 40%;
 }
