@@ -1,15 +1,42 @@
-﻿<h1>Login</h1>
-
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :username %>
-    <%= text_field_tag :username, params[:username] %>
+﻿<%= form_tag sessions_path do %>
+  <div class="login-block">
+    <h1 style="text-align: center;margin-top: 50px;">Login</h1>
+    <table class="login-table-container" style="padding-top: 40px;">
+      <tbody>
+        <tr class="row">
+          <td class="item-name">
+            Username
+          </td>
+        </tr>
+        <tr class="row">
+          <td class="item-value">
+            <%= text_field_tag :username, params[:username], :class => "adminInput", :style => "width: 200px;" %>
+          </td>
+        </tr>
+        <tr class="row">
+          <td class="item-name">
+            Password
+          </td>
+        </tr>
+        <tr class="row">
+          <td class="item-value">
+            <%= password_field_tag :password, value = nil, :class => "adminInput", :style => "width: 200px;" %>
+          </td>
+        </tr>
+        <tr class="row">
+          <td class="forgot-password">
+            Não faz parte?
+            <%= link_to 'Registre-se!', new_user_path %>
+          </td>
+        </tr>
+        <tr class="row">
+          <td>
+            <div class="buttons">
+              <%= submit_tag "Login", :class => "adminButtonBlue" %>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions"><%= submit_tag "Login" %></div>
 <% end %>
-
-<p>Não faz parte? <%= link_to 'Registre-se!', new_user_path %>
