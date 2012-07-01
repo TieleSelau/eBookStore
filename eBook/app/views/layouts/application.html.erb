@@ -7,17 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<% flash.each do |name, msg| %>
-	  <%= content_tag :div, msg, :id => "flash#{name}" %>
-	<% end %>
+	
 	<% if session[:user_id] %>
-	  <%= link_to 'Logout', logout_path, :class => 'logout' %>
-	<script type="text/javascript">
-		LaunchDemoMini();
-	</script>
+		<script type="text/javascript">
+			LaunchDemoMini();
+		</script>
 	<% end %>
-
+	<div class="header">
+		<div class="header-logo">
+			<h1><%= link_to 'eBookSore', root_url, :class => "logo" %></h1>
+		</div>
+		<% if session[:user_id] %>
+			<%= link_to 'Logout', logout_path, :class => 'logout' %>
+			<div class="header-option">
+				<p><%= link_to "Usuarios", users_path %></p>
+				<p><%= link_to "Ebooks", ebooks_path %></p>
+			</div>
+		<% end %>
+	</div>
 	<%= yield %>
-
 	</body>
 </html>

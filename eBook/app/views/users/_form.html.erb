@@ -12,36 +12,27 @@
   <% end %>
 
   <div class="field">
-	<table> 
-		<tr>
-			<td>
-				<%= f.label :nome %><br />
-			</td>
-			<td>
-				<%= f.text_field :nome %>
-			</td>
-		</tr>
-	</table> 
-  </div>
-  
+	<%= f.label :nome %>
+	<%= f.text_field :nome %>
+  </div>  
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :genero %><br />
-    <%= f.text_field :genero %>
+    <%= f.label :genero %>
+    <%= f.select(:genero, "val", {"Masc" => "Masc", "Fem" => "Fem"}) %>
   </div>
   <div class="field">
-    <%= f.label :data_nascimento %><br />
+    <%= f.label :data_nascimento %>
     <%= f.date_select(:data_nascimento, :start_year => 1900, :end_year => 2012) %>
   </div>
   <div class="field">
-    <%= f.label :senha %><br />
+    <%= f.label :senha %>
     <%= f.text_field :senha %>
   </div>
   <div class="field">
-    <%= f.label :admin %><br />
+    <%= f.label :admin %>
     <%= f.check_box :admin %>
   </div>
   <div class="actions">

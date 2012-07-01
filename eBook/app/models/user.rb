@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
+  
   attr_accessible :admin, :data_nascimento, :email, :genero, :nome, :senha
+  
+  has_many :compras
+  has_many :ebook, :through => :compra
   
   validate :email, :senha, :nome, :admin, :presence => true
   validate :email, :nome, :uniqueness => true

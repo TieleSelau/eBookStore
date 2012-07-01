@@ -6,11 +6,16 @@ EBook::Application.routes.draw do
  
   resources :sessions, :only => [:create]
   
-  resources :ebooks
+  resources :ebooks do
+	resources :users
+  end
+  
+  resources :users do
+	resources :ebooks
+  end
 
   resources :compras
 
-  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -61,7 +66,7 @@ EBook::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'Home#index'
+  root :to => 'Users#index'
 
   # See how all your routes lay out with "rake routes"
 

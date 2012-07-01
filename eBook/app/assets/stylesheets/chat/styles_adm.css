@@ -27,12 +27,6 @@ body, h1, h2, h3, h4, h5, h6, address, blockquote, dd, dl, hr, form, input
 	padding: 0;
 }
 
-body
-{
-	font-family: arial, verdana, helvetica, sans-serif;
-	font-size: 12px;
-}
-
 
 hr
 {
@@ -656,23 +650,6 @@ div.login-block table.login-table-container
 	MASTER HEADER
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-.header
-{
-	height: 70px;
-	width: 100%;
-	background: url('images/admin-header-bg.gif') repeat-x;	
-	position: relative;
-}
-
-.header .logo
-{
-	background: url('images/logo.gif');
-	display: block;
-	width: 340px;
-	height: 70px;
-	text-decoration: none;	
-}
 
 .header .languageselector
 {
