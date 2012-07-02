@@ -1,8 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  titulo: MyString
-  autor: MyString
+  id: 1
+  titulo: MyString1
+  autor: MyString1
   descricao: MyText
   edicao: 1
   valor: 1.5
@@ -10,10 +11,11 @@ one:
   paginas: 1
 
 two:
-  titulo: MyString
-  autor: MyString
+  id: 2
+  titulo: MyString2
+  autor: MyString2
   descricao: MyText
   edicao: 1
   valor: 1.5
-  genero: MyString
+  genero: MyString2
   paginas: 1

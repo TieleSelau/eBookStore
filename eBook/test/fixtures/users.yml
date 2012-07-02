@@ -1,17 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  nome: MyString
-  email: MyString
-  genero: MyString
+  id: 1
+  nome: MyString1
+  email: MyString1
+  genero: MyString1
   data_nascimento: 2012-06-20
-  senha: MyString
+  senha: MyString1
   admin: false
 
 two:
-  nome: MyString
-  email: MyString
-  genero: MyString
+  id: 2
+  nome: MyString2
+  email: MyString2
+  genero: MyString2
   data_nascimento: 2012-06-20
-  senha: MyString
+  senha: MyString2
   admin: false
