@@ -6,6 +6,7 @@
   <tr>
     <td><%= link_to ebook.titulo, ebook %></td></tr><tr>
     <td><%= ebook.autor %></td></tr><tr>
+    <td><%= link_to 'Comprar', new_ebook_compra_path(ebook) %></td>
     <td><%= link_to 'Edit', edit_ebook_path(ebook) %></td>
     <td><%= link_to 'Destroy', ebook, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

@@ -7,14 +7,19 @@ EBook::Application.routes.draw do
   resources :sessions, :only => [:create]
   
   resources :ebooks do
-	resources :users
+	  resources :users
+    resources :compras
   end
   
   resources :users do
-	resources :ebooks
+	  resources :ebooks
   end
-
+  
   resources :compras
+  #resources :compras do
+  #  resources :ebooks
+  #  resources :users
+  #end
 
 
   # The priority is based upon order of creation:

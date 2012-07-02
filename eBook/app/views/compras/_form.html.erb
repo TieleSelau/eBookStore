@@ -13,11 +13,19 @@
 
   <div class="field">
     <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
+    <%= f.text_field :user_id, :value => session[:user_id] %>
   </div>
   <div class="field">
     <%= f.label :ebook_id %><br />
-    <%= f.text_field :ebook_id %>
+    <%= f.text_field :ebook_id, :value => params[:ebook_id] %>
+    <!-- DEBUG PARA RAILS - CONSOLE -->
+    <!--
+    <%= puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" %>
+    <%= puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" %>
+    <%= puts params %>
+    <%= puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" %>
+    <%= puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" %>
+    -->
   </div>
   <div class="field">
     <%= f.label :data %><br />
@@ -25,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :valor %><br />
-    <%= f.text_field :valor %>
+    <%= f.text_field :valor, :value => Ebook.find(params[:ebook_id]).valor %>
   </div>
   <div class="actions">
     <%= f.submit %>
