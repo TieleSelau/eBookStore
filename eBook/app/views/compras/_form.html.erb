@@ -13,11 +13,13 @@
 
   <div class="field">
     <%= f.label :user_id %><br />
-    <%= f.text_field :user_id, :value => session[:user_id] %>
-  </div>
+    <%= f.hidden_field :user_id, :value => session[:user_id] %>
+    <input disabled="disabled" id="nome" name="nome" readonly="readonly" size="30" type="text" value="<%= User.find(session[:user_id]).nome %>">
+    </div>
   <div class="field">
     <%= f.label :ebook_id %><br />
-    <%= f.text_field :ebook_id, :value => params[:ebook_id] %>
+    <%= f.hidden_field :ebook_id, :value => params[:ebook_id] %>
+    <input disabled="disabled" id="ebook" name="ebook" readonly="readonly" size="30" type="text" value="<%= params[:ebook_id] %>">
     <!-- DEBUG PARA RAILS - CONSOLE -->
     <!--
     <%= puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" %>
@@ -29,13 +31,14 @@
   </div>
   <div class="field">
     <%= f.label :data %><br />
-    <%= f.date_select :data %>
+    <%= f.date_select :data, :disabled => true %>
   </div>
   <div class="field">
     <%= f.label :valor %><br />
-    <%= f.text_field :valor, :value => Ebook.find(params[:ebook_id]).valor %>
+    <%= f.hidden_field :valor, :value => Ebook.find(params[:ebook_id]).valor %>
+    <input disabled="disabled" id="valor" name="valor" readonly="readonly" size="30" type="text" value="<%= Ebook.find(params[:ebook_id]).valor %>">
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :value => "Confirmar Compra" %>
   </div>
 <% end %>
