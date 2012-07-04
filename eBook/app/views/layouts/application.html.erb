@@ -25,7 +25,9 @@
 			<%= link_to 'Logout', logout_path, :class => 'logout' %>
 		<% end %>
 	</div>
-	<%= yield %>
+	<div class="content">
+		<%= yield %>
+	</div>	
 	<div class="footer-full"><div class="footer-wrapper"><div class="logo"><%= link_to 'eBookSore', root_url %></div></div></div>
 	</body>
 </html>

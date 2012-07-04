@@ -3,26 +3,56 @@ class EbooksController < ApplicationController
   # GET /ebooks
   # GET /ebooks.json
   def index
-    puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-	puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-	if params[:user_id] != nil
-		@ebooks = Ebook.find_all(Compra.find(User.find(params[:user_id])).ebook_id)
-		
-		respond_to do |format|
-		  format.html # userebooks.html.erb
-		  format.json { render :json => @ebooks }
-		end
-	else
-		@ebooks = Ebook.all
-		
-		respond_to do |format|
-		  format.html # index.html.erb
-		  format.json { render :json => @ebooks }
-		end
-	end
-	puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-	puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+    @ebooks = Ebook.all
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @ebooks }
+    end
+  end
+  
+  # GET /ebooks
+  # GET /ebooks.json
+  def userebooks
+    if params[:user_id] != nil
+      puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+      puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+      id = User.find(params[:user_id]).id
+      puts "---------------------------------"
+      compras = Compra.all(:user_id == params[:user_id])
+      #compras.each do |compra|        
+        puts compras
+      #  puts compra.user_id
+      #  puts compra.ebook_id
+        puts "---------------------------------"
+      #end
 
+      array = []
+      Ebook.find(Compra.where(:user_id == params[:user_id])) do |ebook|
+        compras.each do |compra|
+          if compra.ebook_id == ebook.id && compra.user_id == id
+            array.push(ebook)
+          end
+        end        
+        puts ebook.titulo
+      end
+      
+      @ebooks = array
+      puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+      puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+
+      respond_to do |format|
+        format.html # userebooks.html.erb
+        format.json { render :json => @ebooks }
+      end
+    else
+      @ebooks = Ebook.all
+      
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render :json => @ebooks }
+      end
+    end
   end
 
   # GET /ebooks/1

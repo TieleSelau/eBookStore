@@ -1,5 +1,6 @@
 EBook::Application.routes.draw do
   get "/users/:user_id/ebooks" => "ebooks#userebooks", :as => "user_ebook"
+  get "/ebooks/:ebook_id/users" => "users#ebookusers", :as => "ebook_user"
   get "login" => "sessions#new", :as => "login"
   get "logout" => "sessions#destroy", :as => "logout"
   get "signup" => "users#new", :as => "signup"

@@ -12,6 +12,50 @@ class UsersController < ApplicationController
       format.json { render :json => @users }
     end
   end
+  
+  # GET /users
+  # GET /userss.json
+  def ebookusers
+    if params[:ebook_id] != nil
+      puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+      puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+      id = Ebook.find(params[:ebook_id]).id
+      puts "---------------------------------"
+      compras = Compra.all(:ebook_id == params[:ebook_id])
+      #compras.each do |compra|        
+        puts compras
+      #  puts compra.user_id
+      #  puts compra.ebook_id
+        puts "---------------------------------"
+      #end
+
+      array = []
+      User.find(Compra.where(:ebook_id == params[:ebook_id])) do |user|
+        compras.each do |compra|
+          if compra.ebook_id == user.id && compra.ebook_id == id
+            array.push(user)
+          end
+        end        
+        puts user.nome
+      end
+      
+      @users = array
+      puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+      puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+
+      respond_to do |format|
+        format.html # ebookusers.html.erb
+        format.json { render :json => @users }
+      end
+    else
+      @users = User.all
+
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render :json => @users }
+      end
+    end
+  end
 
   # GET /users/1
   # GET /users/1.json

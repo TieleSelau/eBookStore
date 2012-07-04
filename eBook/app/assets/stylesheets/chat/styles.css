@@ -25,6 +25,10 @@
 	HTML GENERAL 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.content {
+	height: auto;
+	min-height: 749px;	
+}
 body, h1, h2, h3, h4, h5, h6, address, blockquote, dd, dl, hr, form, input {
 	margin: 0;
 	padding: 0;
@@ -101,6 +105,7 @@ tbody .item-box .product-item .picture img:hover {
 	MASTER PAGE WRAPPERS
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 .master-wrapper-page {
 	margin: 0 auto 0 auto;
 	width: 940px;
@@ -1042,6 +1047,7 @@ tbody .item-box .product-item .picture img:hover {
 	color: #333;
 	font-weight: bold;
 }
+
 .block-friends a#ctl00_ctl00_cph1_cph2_UserOptionsContent1_MiniUserFriends1_lnkAllFriends:hover,
 .block-friends a#ctl00_ctl00_cph1_cph2_ctl00_MiniUserFriends1_lnkAllFriends:hover {
 	color: #F07500;
@@ -8090,16 +8096,17 @@ p.no-reviews {
 	border: 0 !important;
 }
 .footer-full {
-	#clear: both;
+	clear: both;
 	background: url(img/footer.jpg);
-	#position: relative;
+	position: relative;
 	#margin-left: 130px;
-	position: absolute;
+	#position: absolute;
 	bottom: 0;
+	margin-bottom: 0;
 	#right: 20px;
-	z-index: 999;
+	z-index: -999;
 	overflow: visible;
-	width: 1366px;
+	#width: 1366px;
 }
 .footer-wrapper ul {
 	list-style: none;
@@ -10274,4 +10281,10 @@ body .ebook-details{
 .edit_ebook #ebook_descricao{
 	width: 40%;
 	height: 100px;
+}
+
+.content .create-object{
+	bottom: 0;
+	margin: 0 0 150px 500px;
+	position: absolute;
 }
