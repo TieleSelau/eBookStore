@@ -17,8 +17,8 @@
 		<div class="header-logo">
 			<h1><%= link_to 'eBookSore', root_url, :class => "logo" %></h1><br>
 			<% if session[:user_id] %>
-				<%= link_to "Usuarios", users_path %>&nbsp;
-				<%= link_to "Ebooks", ebooks_path %>
+				<%= link_to "Usuarios", users_path, :class => "user-list" %>&nbsp;
+				<%= link_to "Ebooks", ebooks_path, :class => "ebook-list"%>
 			<% end %>
 		</div>
 		<% if session[:user_id] %>
@@ -26,5 +26,6 @@
 		<% end %>
 	</div>
 	<%= yield %>
+	<div class="footer-full"><div class="footer-wrapper"><div class="logo"><%= link_to 'eBookSore', root_url %></div></div></div>
 	</body>
 </html>

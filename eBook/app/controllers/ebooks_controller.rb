@@ -3,12 +3,26 @@ class EbooksController < ApplicationController
   # GET /ebooks
   # GET /ebooks.json
   def index
-    @ebooks = Ebook.all
+    puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+	puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+	if params[:user_id] != nil
+		@ebooks = Ebook.find_all(Compra.find(User.find(params[:user_id])).ebook_id)
+		
+		respond_to do |format|
+		  format.html # userebooks.html.erb
+		  format.json { render :json => @ebooks }
+		end
+	else
+		@ebooks = Ebook.all
+		
+		respond_to do |format|
+		  format.html # index.html.erb
+		  format.json { render :json => @ebooks }
+		end
+	end
+	puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+	puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render :json => @ebooks }
-    end
   end
 
   # GET /ebooks/1

@@ -1345,6 +1345,19 @@ a.logo {
 	width: 186px !important;
 	height: 25px !important;
 	text-decoration: none;
+	margin-left: 45px;
+	margin-top: -15px;
+	position: fixed;
+}
+.header-logo .user-list{
+	margin-left:20px;
+	padding-top: 25px;
+	position: fixed;
+}
+.header-logo .ebook-list{
+	margin-left:80px;
+	padding-top: 10px;
+	position: fixed;
 }
 a.logo h1 {
 	text-indent: -99999px;
@@ -8069,6 +8082,7 @@ p.no-reviews {
 	position: relative;
 }
 .header-full,
+.header,
 #jappix_mini .jm_actions {
 	background: url(img/top-bg.png) 0;
 }
@@ -8076,9 +8090,16 @@ p.no-reviews {
 	border: 0 !important;
 }
 .footer-full {
-	clear: both;
+	#clear: both;
 	background: url(img/footer.jpg);
-	position: relative;
+	#position: relative;
+	#margin-left: 130px;
+	position: absolute;
+	bottom: 0;
+	#right: 20px;
+	z-index: 999;
+	overflow: visible;
+	width: 1366px;
 }
 .footer-wrapper ul {
 	list-style: none;
@@ -8101,7 +8122,7 @@ p.no-reviews {
 }
 .footer-wrapper {
 	clear: both;
-	height: 180px;
+	height: 60px;
 	padding: 50px 0 0;
 	color: #333;
 }
@@ -8121,6 +8142,7 @@ p.no-reviews {
 	background: url(img/logo-footer-3.png);
 	text-indent: -99999px;
 }
+
 .footer-wrapper .logo,
 .footer-wrapper .links1,
 .footer-wrapper .links2,
@@ -8132,6 +8154,10 @@ p.no-reviews {
 	font-size: 12px;
 	font-weight: bold;
 }
+.footer-wrapper .logo{
+	font-size: 20px;
+}
+
 .footer-wrapper a {
 	color: #666;
 	text-shadow: 0 1px 0 #fff;
@@ -8147,7 +8173,7 @@ p.no-reviews {
 	width: 110px;
 }
 .footer-wrapper .logo a {
-	display: block;
+	#display: block;
 	background: url(img/logo-footer.png) no-repeat;
 	width: 107px;
 	height: 16px;
@@ -10247,4 +10273,5 @@ body .ebook-details{
 .new_ebook #ebook_descricao,
 .edit_ebook #ebook_descricao{
 	width: 40%;
+	height: 100px;
 }

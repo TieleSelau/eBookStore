@@ -36,5 +36,6 @@
   <%= @ebook.descricao %>
 </p>
 
-<%= link_to 'Back', ebooks_path %>
+<%= link_to 'Edit', edit_ebook_path(@ebook) %>  |  <%= link_to 'Back', ebooks_path %><br>
+&nbsp<%= link_to 'Comprar', new_ebook_compra_path(params[:id]) %>
 </div>
